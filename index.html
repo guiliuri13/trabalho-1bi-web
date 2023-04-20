@@ -3,11 +3,81 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Formulário de Notas</title>
+    <title>Selecione um projeto</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 300px;
+            height: 300px;
+            background-color: #222;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border: 1px solid #444;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            padding: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: .8;
+            text-align: center;
+            width: 100%;
+        }
+
+        .emoji {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>aaaaaaaaa</h1>
+    <a class="card curriculum" href="/curriculum.html">
+        <div class="emoji">&#128220;</div>
+        <h2>Curriculum</h2>
+        <p>Visualize meu currículo.</p>
+    </a>
+    <a class="card media" href="/media.html">
+        <div class="emoji">&#128218;</div>
+        <h2>Média</h2>
+        <p>Calculadora de média e resultado semestral.</p>
+    </a>
+    <a class="card register" href="/register.html">
+        <div class="emoji">&#128221;</div>
+        <h2>Register</h2>
+        <p>Registre-se em minha plataforma com validação de CNH.</p>
+    </a>
+    <a class="card sorter" href="/sorter.html">
+        <div class="emoji">&#127922;</div>
+        <h2>Sorter</h2>
+        <p>Sorteador de números entre intervalo definido.</p>
+    </a>
 </body>
 
 </html>
