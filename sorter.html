@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Exemplo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form-control {
+            background-color: #424242;
+            color: #fff;
+            border-color: #424242;
+        }
+
+        .form-control:focus {
+            background-color: #616161;
+            color: #fff;
+            border-color: #616161;
+            box-shadow: none;
+        }
+
+        .btn-primary {
+            background-color: #2196f3;
+            border-color: #2196f3;
+        }
+
+        .btn-primary:hover {
+            background-color: #1976d2;
+            border-color: #1976d2;
+        }
+
+        #resultado {
+            margin-top: 50px;
+            background-color: #424242;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sorteador</h1>
+        <form id="formulario">
+            <div class="form-group">
+                <label for="min">Mínimo:</label>
+                <input type="number" class="form-control" id="min" name="min" required>
+            </div>
+            <div class="form-group">
+                <label for="max">Máximo:</label>
+                <input type="number" class="form-control" id="max" name="max" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        const resultado = document.getElementById('resultado');
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const min = document.getElementById('min').value;
+            const max = document.getElementById('max').value;
+
+            const sortedNumber = Math.floor(Math.random() * (max - min) + min);
+
+            resultado.innerHTML = `
+                <h2>Número sorteado:</h2>
+                <p><strong>${sortedNumber}</strong></p>
+            `;
+        });
+    </script>
+</body>
+
+</html>

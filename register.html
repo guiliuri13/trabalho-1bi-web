@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form-control {
+            background-color: #424242;
+            color: #fff;
+            border-color: #424242;
+        }
+
+        .form-control:focus {
+            background-color: #616161;
+            color: #fff;
+            border-color: #616161;
+            box-shadow: none;
+        }
+
+        .btn-primary {
+            background-color: #2196f3;
+            border-color: #2196f3;
+        }
+
+        .btn-primary:hover {
+            background-color: #1976d2;
+            border-color: #1976d2;
+        }
+
+        #resultado {
+            margin-top: 50px;
+            background-color: #424242;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulário de Exemplo</h1>
+        <form id="formulario">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="number" class="form-control" id="idade" name="idade" required>
+            </div>
+            <div class="form-group">
+                <label for="cnh">Tem CNH:</label>
+                <input type="checkbox" class="form-control" id="cnh" name="cnh">
+            </div>
+            <div class="form-group">
+                <label for="genero">Gênero:</label>
+                <select class="form-control" id="genero" name="genero" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        const resultado = document.getElementById('resultado');
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const idade = document.getElementById('idade').value;
+            const genero = document.getElementById('genero').value;
+            const cnh = document.getElementById('cnh').checked;
+
+            if (+idade < 18 && cnh) {
+                document.getElementById('idade').style.borderColor = 'red';
+                document.getElementById('cnh').style.borderColor = 'red';
+                document.getElementById('idade').previousElementSibling.style.color = 'red';
+                document.getElementById('cnh').previousElementSibling.style.color = 'red';
+                resultado.style.color = 'red';
+                resultado.innerHTML = `<h2>Menores de 18 anos não podem ter CNH</h2>`;
+                return;
+            } else {
+                document.getElementById('idade').style.borderColor = '#424242';
+                document.getElementById('cnh').style.borderColor = '#424242';
+                document.getElementById('idade').previousElementSibling.style.color = '#fff';
+                document.getElementById('cnh').previousElementSibling.style.color = '#fff';
+                resultado.style.color = '#fff';
+            }
+
+            resultado.innerHTML = `
+                <h2>Dados do formulário:</h2>
+                <p><strong>Nome:</strong> ${nome}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Idade:</strong> ${idade}</p>
+                <p><strong>Gênero:</strong> ${genero}</p>
+            `;
+        });
+    </script>
+</body>
+
+</html>

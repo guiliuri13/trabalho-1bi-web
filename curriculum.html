@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Estilo para os cabeçalhos */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 0;
+        }
+
+        /* Estilo para os links */
+        a {
+            color: #00b3ff;
+        }
+
+        /* Estilo para a seção do cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Estilo para a imagem de perfil */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #f5f5f5;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        /* Estilo para a seção do corpo */
+        section {
+            padding: 20px;
+        }
+
+        /* Estilo para as seções de habilidades e experiência */
+        .skills,
+        .experience {
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para as listas de habilidades */
+        .skills ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills li {
+            margin-bottom: 10px;
+        }
+
+        .skills .skill-name {
+            font-weight: bold;
+        }
+
+        .skills .skill-level {
+            display: inline-block;
+            width: 200px;
+            height: 10px;
+            background-color: #333333;
+            position: relative;
+            margin-bottom: 5px;
+        }
+
+        .skills .skill-level .level-bar {
+            height: 10px;
+            background-color: #00b3ff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Estilo para as seções de experiência */
+        .experience ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .experience li {
+            margin-bottom: 20px;
+        }
+
+        .experience .job-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .experience .job-company {
+            font-size: 1.1em;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .experience .job-dates {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .experience .job-description {
+            line-height: 1.5;
+        }
+
+        /* Estilo para a seção de hobbies */
+        .hobbies {
+            margin-bottom: 30px;
+        }
+
+        .hobbies ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .hobbies li {
+            margin-bottom: 10px;
+        }
+
+        .hobbies .hobby-name {
+            font-weight: bold;
+        }
+
+        .hobbies .hobby-description {
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+    </style>
+    <header>
+        <h1>Guilherme Iuri de Barros</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou finalista na competição de inovação e tecnologia do SENAI Inova PR, top 5% mundial em testes de competências do LinkedIn, tenho mais de 66 cursos feitos com certificados, e mais de 630 horas certificadas na Alura.
+
+            Sou programador fullstack, estudante de Análise e Desenvolvimento de Sistemas na Universidade Positivo, apaixonado por tecnologia, empreendedorismo, astrofísica, música e aviação. Atualmente trabalho como desenvolvedor fullstack pleno e tenho mais 2 anos de experiência com as principais tecnologias: HTML, CSS, JavaScript e TypeScript, ReactJS, React Native, Lua, MySql e PostgreSQL, GO e outras.
+            
+            Quando não estou trabalhando, estou codando algum projeto pessoal ou lendo.
+            
+            Amo resolver problemas sociais utilizando a tecnologia, e poder ajudar com a programação.
+        </p>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Desenvolvimento front-end (React, Angular, SPAs, SEO)</li>
+            <li>Desenvolvimento back-end (Java, Python, C, Lua, Node.js)</li>
+            <li>Machine Learning, Artificial Intelligence, Visão computacional...</li>
+            <li>React avançado (JS, TS, Vite, Next, TensorFlow.js)</li>
+            <li>Desenvolvimento de APIs REST</li>
+            <li>Banco de dados (MySQL, MongoDB)</li>
+            <li>Desenvolvimento mobile (React Native)</li>
+            <li>Gestão de projetos (Scrum)</li>
+        </ul>
+    </section>
+
+    <section id="experiencia">
+        <h2>Experiência Profissional</h2>
+        <ul>
+            <li>
+                <h3>Desenvolvedor Full-stack Pleno</h3>
+                <h4>Carga Online</h4>
+                <p>Nov 2021 - Present</p>
+            </li>
+            <li>
+                <h3>Desenvolvedor Full-stack e Tech Lead</h3>
+                <h4>TradeTool</h4>
+                <p>Feb 2021 - Feb 2022 · 1 yr</p>
+                <ul>
+                    <li>Gerenciar equipe de desenvolvimento, de suporte e de administração.</li>
+                    <li>Realizar pesquisas de mercado, viabilidade do projeto e estudo de investimentos.</li>
+                    <li>Treinar e capacitar novos desenvolvedores do zero.</li>
+                    <li>Construir uma plataforma com sistemas de pagamentos e anúncios, intuitiva, acessível para deficientes, sem bugs e performática.</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Desenvolvedor Full-stack e Tech Lead</h3>
+                <h4>São Paulo Roleplay</h4>
+                <p>Sep 2020 - Dec 2020 · 4 mos</p>
+                <ul>
+                    <li>Gerenciar uma equipe composta de 3 desenvolvedores e 15 funcionários.</li>
+                    <li>Construir um servidor de FiveM inovador, que proporcionasse uma experiência única ao usuário, utilizando Lua script, HTML, SaSS, JS e MySQL.</li>
+                    <li>Estudo de viabilidade financeira com relação aos planos vips disponibilizados aos usuários e gerência de investimentos.</li>
+                    <li>Lidar com em média, 400 usuários simultâneos.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="educacao">
+        <h2>Educação</h2>
+        <ul>
+            <li>
+                <h3>Análise e desenvolvimento de sistemas</h3>
+                <h4>Universidade prositivo</h4>
+                <p>Jan 2022 - Dec 2023 · 2 yr</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <ul>
+            <li>
+                <h3>Telefone</h3>
+                <p>(41) 9 9999-9999</p>
+            </li>
+            <li>
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:guiliuri14@gmail.com">
+                        guiliuri14@gmail.com
+                    </a>
+                </p>
+            </li>
+            <li>
+                <h3>Endereço</h3>
+                <p>Rua dos bobos, nº 0</p>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
